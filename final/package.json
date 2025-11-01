@@ -1,0 +1,27 @@
+{
+  "name": "medical-records-interaction",
+  "version": "1.0.0",
+  "description": "Scripts để tương tác với Medical Records Contract trên Celo Sepolia",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "demo": "node scripts/0-demo.js",
+    "check-connection": "node scripts/1-check-connection.js",
+    "register-admin": "node scripts/2-register-admin.js",
+    "register-doctor": "node scripts/3-register-doctor.js",
+    "register-patient": "node scripts/4-register-patient.js",
+    "create-record": "node scripts/5-create-record.js",
+    "get-records": "node scripts/6-get-records.js",
+    "update-record": "node scripts/7-update-record.js",
+    "get-all": "node scripts/8-get-all-records.js",
+    "set-user-active": "node scripts/9-set-user-active.js",
+    "list-users": "node scripts/10-list-users.js"
+  },
+  "keywords": ["blockchain", "celo", "medical-records"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "dotenv": "^16.4.5"
+  }
+}

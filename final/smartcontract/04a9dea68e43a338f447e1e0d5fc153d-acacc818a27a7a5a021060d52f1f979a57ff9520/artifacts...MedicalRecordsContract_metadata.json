@@ -1,0 +1,572 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AlreadyExists",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidRole",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "RecordNotFound",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Unauthorized",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "UserInactive",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "UserNotFound",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "diagnosis",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "treatment",
+						"type": "string"
+					}
+				],
+				"name": "create_record",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "get_all_records",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint32",
+								"name": "id",
+								"type": "uint32"
+							},
+							{
+								"internalType": "address",
+								"name": "patientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "patientName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "doctorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "doctorName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "diagnosis",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "treatment",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "createdAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint64",
+								"name": "updatedAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct MedicalRecordsContract.MedicalRecord[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "recordId",
+						"type": "uint32"
+					}
+				],
+				"name": "get_record",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint32",
+								"name": "id",
+								"type": "uint32"
+							},
+							{
+								"internalType": "address",
+								"name": "patientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "patientName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "doctorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "doctorName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "diagnosis",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "treatment",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "createdAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint64",
+								"name": "updatedAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct MedicalRecordsContract.MedicalRecord",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "get_record_count",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "doctor",
+						"type": "address"
+					}
+				],
+				"name": "get_records_by_doctor",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint32",
+								"name": "id",
+								"type": "uint32"
+							},
+							{
+								"internalType": "address",
+								"name": "patientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "patientName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "doctorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "doctorName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "diagnosis",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "treatment",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "createdAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint64",
+								"name": "updatedAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct MedicalRecordsContract.MedicalRecord[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					}
+				],
+				"name": "get_records_by_patient",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint32",
+								"name": "id",
+								"type": "uint32"
+							},
+							{
+								"internalType": "address",
+								"name": "patientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "patientName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "doctorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "doctorName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "diagnosis",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "treatment",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "createdAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint64",
+								"name": "updatedAt",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct MedicalRecordsContract.MedicalRecord[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "get_user",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum MedicalRecordsContract.Role",
+						"name": "role",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint32",
+						"name": "age",
+						"type": "uint32"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "specialty",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasSpecialty",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint64",
+						"name": "createdAt",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum MedicalRecordsContract.Role",
+						"name": "role",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint32",
+						"name": "age",
+						"type": "uint32"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "specialty",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasSpecialty",
+						"type": "bool"
+					}
+				],
+				"name": "register_user",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					}
+				],
+				"name": "set_user_active",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "recordId",
+						"type": "uint32"
+					},
+					{
+						"internalType": "string",
+						"name": "diagnosis",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "treatment",
+						"type": "string"
+					}
+				],
+				"name": "update_record",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "MedicalRecordsContract (Solidity port of Soroban version)",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"create_record(address,string,string)": {
+					"notice": "Tạo hồ sơ y tế mới (chỉ Doctor) Rust: create_record(env, doctor, patient, diagnosis, treatment) Solidity: dùng msg.sender là doctor"
+				},
+				"get_all_records()": {
+					"notice": "Lấy tất cả hồ sơ (Admin only)"
+				},
+				"get_record(uint32)": {
+					"notice": "Lấy thông tin record"
+				},
+				"get_record_count()": {
+					"notice": "Lấy số lượng records"
+				},
+				"get_records_by_doctor(address)": {
+					"notice": "Lấy tất cả hồ sơ của bác sĩ"
+				},
+				"get_records_by_patient(address)": {
+					"notice": "Lấy tất cả hồ sơ của bệnh nhân"
+				},
+				"get_user(address)": {
+					"notice": "Lấy thông tin user"
+				},
+				"register_user(address,uint8,string,uint32,string,string,bool)": {
+					"notice": "Đăng ký người dùng mới (chỉ Admin; riêng lần đầu cho phép tạo Admin) Rust: register_user(env, caller, address, role, name, age, email, specialty) Solidity: dùng msg.sender thay cho caller"
+				},
+				"set_user_active(address,bool)": {
+					"notice": "Kích hoạt/vô hiệu hóa user (chỉ Admin) Rust: set_user_active(env, caller, user_address, is_active) Solidity: dùng msg.sender thay cho caller"
+				},
+				"update_record(uint32,string,string)": {
+					"notice": "Cập nhật hồ sơ (chỉ Doctor tạo hồ sơ đó) Rust: update_record(env, doctor, record_id, diagnosis, treatment) Solidity: dùng msg.sender là doctor"
+				}
+			},
+			"notice": "Giữ nguyên tên hàm & chức năng cốt lõi so với bản Rust. Quy ước: - \"caller.require_auth()\" -> dùng msg.sender - Lần đăng ký đầu tiên chỉ cho phép tạo Admin - get_all_records: chỉ Admin được gọi (theo comment gốc)",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SimpleStorage.sol": "MedicalRecordsContract"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SimpleStorage.sol": {
+			"keccak256": "0x2fa2874c4f40804e4a4d1263574be9cf8a18a0332297ed50263673826be4f1bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2402920873e508139e4ff2fabc0c7b3488b6705cf724ff6282e26f6a5ad6c4c3",
+				"dweb:/ipfs/QmbegGa966oiCqvjHDY5LDWn4jGxANAXYHbMVkdXMw2ocm"
+			]
+		}
+	},
+	"version": 1
+}
