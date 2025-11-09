@@ -1,13 +1,26 @@
 # Medical Records Smart Contract on Celo
 
+## 🚀 Deployed Contract Information
+
+**Smart Contract Address**: `0xcB2939617af4644184E5218109A3ecD69050bBA4`
+
+**Network**: Celo Sepolia Testnet
+
+**Block Explorer**: [View Contract on Blockscout](https://celo-sepolia.blockscout.com/address/0xcB2939617af4644184E5218109A3ecD69050bBA4?tab=contract_abi)
+
+**Deployment Date**: November 9, 2025
+
+---
+
 A decentralized medical records management system built on the Celo blockchain. This smart contract enables secure storage and management of medical records with role-based access control.
 
 ## 📋 Table of Contents
 
+- [Deployed Contract Information](#-deployed-contract-information)
 - [Overview](#overview)
 - [Features](#features)
 - [Smart Contract Details](#smart-contract-details)
-- [Deployment Information](#deployment-information)
+- [Quick Start](#quick-start)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -16,6 +29,7 @@ A decentralized medical records management system built on the Celo blockchain. 
 - [Security Features](#security-features)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
+- [Network Information](#-network-information)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -59,10 +73,12 @@ The Medical Records Smart Contract is a blockchain-based solution for managing m
 
 ### Contract Information
 
-- **Contract Name**: `MedicalRecordsContract`
+- **Contract Address**: `0xcB2939617af4644184E5218109A3ecD69050bBA4`
+- **Network**: Celo Sepolia Testnet
+- **Chain ID**: 44787
 - **Compiler Version**: Solidity 0.8.30
 - **License**: MIT
-- **Network**: Celo Alfajores Testnet / Celo Mainnet
+- **Block Explorer**: [Blockscout](https://celo-sepolia.blockscout.com/address/0xcB2939617af4644184E5218109A3ecD69050bBA4)
 
 ### Data Structures
 
@@ -108,39 +124,54 @@ enum Role {
 }
 ```
 
-## 🚀 Deployment Information
+## 🚀 Quick Start
 
-### Deployed Contract Address
+### 1. Clone and Install
 
-**Celo Alfajores Testnet**: 
-```
-[Your deployed contract address will go here]
-```
-
-**Celo Mainnet**: 
-```
-[Your mainnet contract address if deployed]
+```bash
+git clone https://github.com/minhleeee123/smartcontract1.11.git
+cd smartcontract1.11/final
+npm install
 ```
 
-### Deployment Details
+### 2. Configure Environment
 
-- **Deployer Address**: [Your deployer wallet address]
-- **Deployment Date**: [Deployment date]
-- **Transaction Hash**: [Deployment transaction hash]
-- **Block Number**: [Deployment block number]
+Create a `.env` file:
 
-### Network Configuration
+```bash
+cp .env.example .env
+```
 
-#### Celo Alfajores Testnet
-- **Chain ID**: 44787
-- **RPC URL**: `https://alfajores-forno.celo-testnet.org`
-- **Block Explorer**: https://alfajores.celoscan.io
-- **Faucet**: https://faucet.celo.org/alfajores
+Edit `.env`:
+```env
+RPC_URL=https://alfajores-forno.celo-testnet.org
+PRIVATE_KEY=your_private_key_here
+CONTRACT_ADDRESS=0xcB2939617af4644184E5218109A3ecD69050bBA4
+```
 
-#### Celo Mainnet
-- **Chain ID**: 42220
-- **RPC URL**: `https://forno.celo.org`
-- **Block Explorer**: https://celoscan.io
+### 3. Get Test Tokens
+
+Visit [Celo Faucet](https://faucet.celo.org/alfajores) to get test CELO tokens.
+
+### 4. Verify Connection
+
+```bash
+npm run check-connection
+```
+
+### 5. Register Admin (First User)
+
+```bash
+npm run register-admin
+```
+
+### 6. Start Using
+
+```bash
+npm run register-doctor  # Register a doctor
+npm run register-patient # Register a patient
+npm run create-record    # Create a medical record
+```
 
 ## 📦 Prerequisites
 
@@ -155,7 +186,7 @@ Before running this project, ensure you have:
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/minhleeee123/smartcontract1.11.git
 cd smartcontract1.11/final
 ```
 
@@ -183,7 +214,7 @@ RPC_URL=https://alfajores-forno.celo-testnet.org
 PRIVATE_KEY=your_private_key_here
 
 # Deployed Contract Address
-CONTRACT_ADDRESS=your_contract_address_here
+CONTRACT_ADDRESS=0xcB2939617af4644184E5218109A3ecD69050bBA4
 
 # Network Details
 CHAIN_ID=44787
@@ -231,7 +262,7 @@ Expected output:
    Balance: 1.5 CELO
 
 📜 Contract Info:
-   Address: 0x...
+   Address: 0xcB2939617af4644184E5218109A3ecD69050bBA4
    Record Count: 0
    ✅ Contract đang hoạt động!
 ```
@@ -514,10 +545,8 @@ final/
 ├── package.json                 # Project dependencies and scripts
 ├── README.md                    # This file
 ├── .env                         # Environment configuration (not in git)
+├── .env.example                 # Environment template
 ├── .gitignore                   # Git ignore rules
-│
-├── abi/
-│   └── MedicalRecordsContract.json  # Contract ABI
 │
 ├── scripts/
 │   ├── 0-demo.js               # Demo script
@@ -595,7 +624,10 @@ Waits for transaction confirmation with progress.
 - **Chain ID**: 44787
 - **Currency**: CELO (testnet)
 - **Block Time**: ~5 seconds
+- **RPC URL**: https://alfajores-forno.celo-testnet.org
 - **Explorer**: https://alfajores.celoscan.io
+- **Alternative Explorer**: https://celo-sepolia.blockscout.com
+- **Faucet**: https://faucet.celo.org/alfajores
 
 ### Celo Mainnet
 
@@ -603,6 +635,7 @@ Waits for transaction confirmation with progress.
 - **Chain ID**: 42220
 - **Currency**: CELO
 - **Block Time**: ~5 seconds
+- **RPC URL**: https://forno.celo.org
 - **Explorer**: https://celoscan.io
 
 ## 🤝 Contributing
@@ -654,9 +687,9 @@ SOFTWARE.
 
 For support and questions:
 
-- Open an issue in the GitHub repository
-- Contact the development team
-- Check the documentation
+- **GitHub**: [minhleeee123/smartcontract1.11](https://github.com/minhleeee123/smartcontract1.11)
+- **Issues**: Open an issue in the GitHub repository
+- **Contract Explorer**: [View on Blockscout](https://celo-sepolia.blockscout.com/address/0xcB2939617af4644184E5218109A3ecD69050bBA4)
 
 ## 🔮 Future Enhancements
 
@@ -704,5 +737,9 @@ This is a demonstration project for educational purposes. Before using in produc
 ---
 
 **Built with ❤️ on Celo blockchain**
+
+**Contract Address**: `0xcB2939617af4644184E5218109A3ecD69050bBA4`
+
+**Explorer**: [View on Blockscout](https://celo-sepolia.blockscout.com/address/0xcB2939617af4644184E5218109A3ecD69050bBA4?tab=contract_abi)
 
 For more information about Celo, visit: https://celo.org
